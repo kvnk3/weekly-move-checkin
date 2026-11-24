@@ -271,7 +271,7 @@ $('demo').onclick=()=>{summaryRows=[];loaded=true;previousWeek();const s=$('star
           if (!words.length) candidates.push(line.text ?? '');
           for (const word of words) {
             const height = word.bbox.y1 - word.bbox.y0;
-            const gap = previous ? word.bbox.x0 - previous.bbox.x1 : 0;
+            const gap = previous ? word.bbox.x0 - previous.x1 : 0;
             if (name && gap > Math.max(7, height * 0.75)) {
               candidates.push(name);
               name = '';
